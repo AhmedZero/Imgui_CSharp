@@ -25,7 +25,7 @@ jobs:
       shell: pwsh
       run: |
         New-Item -ItemType Directory -Path C:\builtfiles -Force > $null
-        Compress-Archive -Path Imgui_CSharp\testnative\bin\Release\net6.0\win-x64\publish\* -DestinationPath C:\builtfiles\Imgui_CSharp.zip
+        Compress-Archive -Path D:\a\Imgui_CSharp\Imgui_CSharp\testnative\bin\Release\net6.0\win-x64\publish\* -DestinationPath C:\builtfiles\Imgui_CSharp.zip
 
     - uses: actions/upload-artifact@v2
       if: github.ref == 'refs/heads/master' || startsWith(github.ref, 'refs/tags/')
