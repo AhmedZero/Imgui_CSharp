@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Platforms>AnyCPU;x64</Platforms>
+		<PublishTrimmed>true</PublishTrimmed>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+	</PropertyGroup>
+
+
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.DotNet.ILCompiler" Version="7.0.0-preview.4.22212.4" />
+		<PackageReference Include="OpenTK" Version="4.7.1" />
+		<PackageReference Include="OpenTK.Graphics" Version="4.7.1" />
+		<PackageReference Include="OpenTK.Windowing.Desktop" Version="4.7.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="Shaders\Fragment120.glsl" />
+		<EmbeddedResource Include="Shaders\Fragment130.glsl" />
+		<EmbeddedResource Include="Shaders\Fragment300es.glsl" />
+		<EmbeddedResource Include="Shaders\Fragment410core.glsl" />
+		<EmbeddedResource Include="Shaders\Vertex120.glsl" />
+		<EmbeddedResource Include="Shaders\Vertex130.glsl" />
+		<EmbeddedResource Include="Shaders\Vertex300es.glsl" />
+		<EmbeddedResource Include="Shaders\Vertex410core.glsl" />
+		<DirectPInvoke Include="Mochi.DearImGui.Native" />
+		<NativeLibrary Include="Mochi.DearImGui.Native.lib" />
+
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="#Generated\Backends\Direct3D10\" />
+	  <Folder Include="#Generated\Backends\Direct3D9\" />
+	  <Folder Include="#Generated\Backends\Dx12\" />
+	</ItemGroup>
+
+</Project>
