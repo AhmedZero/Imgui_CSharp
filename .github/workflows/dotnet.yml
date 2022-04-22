@@ -30,6 +30,6 @@ jobs:
     - uses: actions/upload-artifact@v2
       if: github.ref == 'refs/heads/master' || startsWith(github.ref, 'refs/tags/')
       with:
-        name: dnSpy-net-win32
+        name: Imgui_CSharp
         path: C:\builtfiles\Imgui_CSharp.zip
         if-no-files-found: error
